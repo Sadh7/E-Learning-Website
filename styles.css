@@ -1,0 +1,299 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation Bar */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ff9800;
+}
+
+/* Main Content Area */
+main {
+    padding: 20px;
+}
+
+html, body {
+    overflow: hidden; /* Hides the scrollbar */
+    height: 100%; /* Ensures the body takes up full height of the viewport */
+    margin: 0; /* Removes default margin */
+}
+/* Hero Section */
+.hero {
+    background: url('images/IndexBack.jpg') no-repeat center center/cover;
+    height: 100vh; /* Makes the hero section take up the full viewport height */
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the background image */
+}
+
+.hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.hero .btn {
+    display: inline-block;
+    background: #ff9800;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-size: 1.2em;
+    transition: background 0.3s ease;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.hero .btn:hover {
+    background: #e68a00;
+}
+
+/* Course List */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    gap: 20px; /* Space between the course items */
+    padding: 20px; /* Padding around the grid */
+    margin-top: 20px;
+    text-align: center;
+}
+
+.course-list h1 {
+    margin: 0; /* Remove default margin */
+    padding: 20px 0; /* Add padding for spacing around the heading */
+    font-size: 2em;
+}
+
+.course {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease; /* Transition effect for hover */
+}
+
+.course:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+.course h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.course p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.course .btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.course-icon {
+    width: 40px; /* Adjust width to make icons smaller */
+    height: 40px; /* Maintain aspect ratio */
+    margin-top: 10px;
+}
+
+.course img:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+    transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .course {
+        width: 48%; /* Two courses per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .course {
+        width: 100%; /* One course per row on very small screens */
+    }
+}
+
+
+/* Forms (Login, Signup) */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form .btn {
+    display: block;
+    width: 100%;
+    background: #ff9800;
+    color: #fff;
+    padding: 10px;
+    font-size: 1.2em;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form .btn:hover {
+    background: #e68a00;
+}
+
+form p {
+    text-align: center;
+}
+
+form p a {
+    color: #333;
+    text-decoration: none;
+}
+
+form p a:hover {
+    text-decoration: underline;
+}
+
+/* General Section Styling */
+section {
+    padding: 40px 20px;
+    margin: 20px 0;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+/* Specific Section Styles */
+.about-intro {
+    background-color: #e9ecef;
+}
+
+.mission {
+    background-color: #fff3cd;
+}
+
+.team {
+    background-color: #e2e3e5;
+}
+
+.contact-info {
+    background-color: #d1ecf1;
+}
+
+/* Team Section Specific Styles */
+.team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.team-member {
+    margin: 20px;
+    flex: 1 1 calc(25% - 40px); /* Responsive flexbox setup */
+    box-sizing: border-box;
+}
+
+.team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #343a40;
+    color: white;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .team-member {
+        flex: 1 1 calc(50% - 40px); /* Two team members per row on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .team-member {
+        flex: 1 1 100%; /* One team member per row on very small screens */
+    }
+}
+
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
